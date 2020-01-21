@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Sergey  Pashin](https://up.htmlacademy.ru/htmlcss/27/user/1072207).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Уразаев](https://htmlacademy.ru/profile/urazaev).
 
 ---
 
