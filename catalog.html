@@ -2,25 +2,29 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Нёрдс</title>
+    <title>Нёрдс-магазин</title>
   </head>
   <body>
-<header>
-  <nav>
-    <div class="logo">
-      <a href="index.html" >
-        <img src="" alt="Изображение логотипа компании Нёрдс" width="" height="">
-      </a>
-    </div>
-    <ul>
-      <li><a href="#">студия</a></li>
-      <li><a href="#">клиенты</a></li>
-      <li><a href="catalog.html">магазин</a></li>
-      <li><a href="#">контакты</a></li>
-      <li><a href="#">корзина</a></li>
-    </ul>
-  </nav>
-</header>
+		<header>
+  
+			<div class="logo">
+				<a href="index.html">
+					<!-- Здесь(Ниже) будет вставлено вырезанное изображение логотипа-->
+					<img src="https://via.placeholder.com/150x100" alt="Изображение логотипа компании Нёрдс" width="160" height="65">
+					<!-- Текстовый логотип, как скрывать при наличии рабочего изображения логитипа? -->
+					<p>Nёrds</p>
+				</a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">студия</a></li>
+					<li><a href="#id_customer">клиенты</a></li>
+					<li><a href="catalog.html">магазин</a></li>
+					<li><a href="#id_contacts">контакты</a></li>
+				</ul>
+			</nav>
+			<a class="basket" href="">корзина</a>
+		</header>
 <main>
 	<h1>Магазин готовых шаблонов</h1>
 	<div class="filter">
@@ -44,13 +48,23 @@
 		</form>
 	</div>
 	<div class="sort">
-		<p>Сортировать: по цене по типу по названию</p>
-		<img src="" alt="" width="" height="">
-		<img src="" alt="" width="" height="">
-		<img src="" alt="" width="" height="">
-		<img src="" alt="" width="" height="">
-		<img src="" alt="" width="" height="">
-		<img src="" alt="" width="" height="">
+		<p>Сортировать:</p>
+		<ul>
+			<li><a href="">по цене</a></li>
+			<li><a href="">по типу </a></li>
+			<li><a href="">по названию</a></li>
+		</ul>
+		<div class="switch">
+			<a href=""><span class="triangle-up"></span></a>
+			<a href=""><span class="triangle-down"></span></a>
+		</div>
+		<!-- Как будут вставляться изображения сайтов, целиком или как либо по отдельности, надстройка+Фото и тд? -->
+		<img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100">
+		<img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100">
+		<img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100">
+		<img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100">
+		<img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100">
+		<img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100">
 		<button>1</button>
 		<button>2</button>
 		<button>3</button>
@@ -61,20 +75,23 @@
   <!-- карта -->
   <div class="map">
   </div>
+  <!-- контакты -->
+  <div class="contacts" id="id_contacts">
+    <h4>NЁRDS DESIGN STUDIO</h4>
+    <span class="address"><br>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</span><br><br>
+    <span class="phone">тел. +7 (812) 275-75-75</span><br>
+    <button>напишите нам</button>
+  </div>
   <!-- Социальные сети -->
   <div class="social_network">
-    <a href="#">
-      <img src="" alt="Вконтакте" width="" height="">
-    </a>
-    <a href="#">
-      <img src="" alt="Фейсбук" width="" height="">
-    </a>
-    <a href="#">
-      <img src="" alt="Инстаграмм" width="" height="">
-    </a>
+    <a class="icon-vk" href="https://vk.com/"><img src="https://via.placeholder.com/150x100" alt="Вконтакте" width="79" height="79"></a>
+    <a class="icon-facebook" href="https://www.facebook.com/"><img src="https://via.placeholder.com/150x100" alt="Фейсбук" width="79" height="79"></a>
+    <a class="icon-instagram" href="https://instagram.com/"><img src="https://via.placeholder.com/150x100" alt="Инстаграмм" width="79" height="79"></a>
   </div>
   <!-- Предложение скидки -->
   <div class="offer">
+    <p class="title">Давайте дружить, это выгодно!</p>
+    <p class="text">Скидка 10% для друзей из социальных сетей.</p>
   </div>
 </footer>
 </body>
