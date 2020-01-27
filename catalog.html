@@ -28,23 +28,23 @@
 <main>
 	<h1>Магазин готовых шаблонов</h1>
 	<div class="filter">
-		стоимость:<br>
+		стоимость:
 		от до
 		<form method="post"
 					action="https://echo.htmlacademy.ru">
 			<p>сетка:</p>
-			<input type="radio" name="adaptive" value="adaptive"> Адаптивная<br>
-			<input type="radio" name="fixed" value="fixed"> Фиксированная<br>
-			<input type="radio" name="rubber" value="rubber"> Резиновая<br>
+			<input type="radio" name="adaptive" value="adaptive"> Адаптивная
+			<input type="radio" name="fixed" value="fixed"> Фиксированная
+			<input type="radio" name="rubber" value="rubber"> Резиновая
 		
 			<p>особенности:</p>
-			<input type="checkbox" name="slider" value="slider"> Слайдер<br>
-			<input type="checkbox" name="advantage" value="advantage"> Блок преимуществ<br>
-			<input type="checkbox" name="news" value="news"> Новости<br>
-			<input type="checkbox" name="gallery" value="gallery"> Галерея<br>
-			<input type="checkbox" name="shopping_cart" value="shopping_cart"> Корзина<br>
+			<input type="checkbox" name="slider" value="slider"> Слайдер
+			<input type="checkbox" name="advantage" value="advantage"> Блок преимуществ
+			<input type="checkbox" name="news" value="news"> Новости
+			<input type="checkbox" name="gallery" value="gallery"> Галерея
+			<input type="checkbox" name="shopping_cart" value="shopping_cart"> Корзина
 
-			<button>Показать</button>
+			<button type="button">Показать</button>
 		</form>
 	</div>
 	<div class="sort">
@@ -58,16 +58,101 @@
 			<a href=""><span class="triangle-up"></span></a>
 			<a href=""><span class="triangle-down"></span></a>
 		</div>
-		<!-- Как будут вставляться изображения сайтов, целиком или как либо по отдельности, надстройка+Фото и тд? -->
-		<img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100">
-		<img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100">
-		<img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100">
-		<img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100">
-		<img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100">
-		<img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100">
-		<button>1</button>
-		<button>2</button>
-		<button>3</button>
+    <section class="cards"><!--Контейнер для построения сетки из карточек товаров в нем все карточки сайтов-->
+      <article class="card_sedona"><!--SEDONA/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
+      <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
+        <div class="header"><!--Шапка сайта- изображение, меняет цвет при наведении, в ней 3и элемента(круги) ? <span>?--> 
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
+        <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
+          <a href="#" class="card_price"><p><b>sedona</b></p></a><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
+          <p>Информационный сайт для туристов</p>
+          <button type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+        </div>
+      </div>
+      </article>
+      <article class="card_pink"><!--Pink App/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
+      <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
+        <div class="header"><!--Шапка сайта- изображение, меняет цвет при наведении, в ней 3и элемента(круги) ? <span>?--> 
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
+        <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
+          <a href="#" class="card_price"><p><b>PINK APP</b></p></a><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
+          <p>Продуктовый лендинг приложения для iOS и Android</p>
+          <button type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+        </div>
+      </div>
+      </article>
+      <article class="card_barbershop"><!--Barbershop/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
+      <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
+        <div class="header"><!--Шапка сайта- изображение, меняет цвет при наведении, в ней 3и элемента(круги) ? <span>?--> 
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
+        <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
+          <a href="#" class="card_price"><p><b>BARBERSHOP</b></p></a><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
+          <p>Сайт салона красоты.Для мужчин, да.</p>
+          <button type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+        </div>
+      </div>
+      </article>
+      <article class="card_mishka"><!--MISHKA/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
+      <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
+        <div class="header"><!--Шапка сайта- изображение, меняет цвет при наведении, в ней 3и элемента(круги) ? <span>?--> 
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
+        <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
+          <a href="#" class="card_price"><p><b>MISHKA</b></p></a><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
+          <p>Интернет-магазин вязаных игрушек</p>
+          <button type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+        </div>
+      </div>
+      </article>
+      <article class="card_a_plus"><!--A Plus/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
+      <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
+        <div class="header"><!--Шапка сайта- изображение, меняет цвет при наведении, в ней 3и элемента(круги) ? <span>?--> 
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
+        <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
+          <a href="#" class="card_price"><p><b>A PLUS</b></p></a><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
+          <p>Лендинг курсов повышения квалификации</p>
+          <button type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+        </div>
+      </div>
+      </article>
+      <article class="card_kvast"><!--КВАСТ/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
+      <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
+        <div class="header"><!--Шапка сайта- изображение, меняет цвет при наведении, в ней 3и элемента(круги) ? <span>?--> 
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <img src="https://via.placeholder.com/150x100" alt="Вариант выбора сайта" width="150" height="100"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
+        <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
+          <a href="#" class="card_price"><p><b>КВАСТ</b></p></a><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
+          <p>Промо-сайт производителя крафтового кваса</p>
+          <button type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+        </div>
+      </div>
+      </article>
+    </section>
+		<button type="button">1</button >
+		<button type="button">2</button >
+		<button type="button">3</button >
 		<button>следующая</button>
 	</div>
 </main>
@@ -78,9 +163,9 @@
   <!-- контакты -->
   <div class="contacts" id="id_contacts">
     <h4>NЁRDS DESIGN STUDIO</h4>
-    <span class="address"><br>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</span><br><br>
-    <span class="phone">тел. +7 (812) 275-75-75</span><br>
-    <button>напишите нам</button>
+    <span class="address">191186, Санкт-Петербург,ул. Б. Конюшенная, д. 19/8</span>
+    <span class="phone">тел. +7 (812) 275-75-75</span>
+    <button type="button">напишите нам</button>
   </div>
   <!-- Социальные сети -->
   <div class="social_network">
