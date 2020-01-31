@@ -30,31 +30,37 @@
           от до
           <form method="post"
                 action="https://echo.htmlacademy.ru">
-            <p>сетка:</p>
-            <label class="radio_adaptive"><input type="radio" name="adaptive" value="adaptive"> Адаптивная</label>
-            <label class="radio_fixed"><input type="radio" name="fixed" value="fixed"> Фиксированная</label>
-            <label class="radio_rubber"><input type="radio" name="rubber" value="rubber"> Резиновая</label>
-          
-            <p>особенности:</p>
-            <label class="checkbox_slider"><input type="checkbox" name="slider" value="slider"> Слайдер</label>
-            <label class="checkbox_advantage"><input type="checkbox" name="advantage" value="advantage"> Блок преимуществ</label>
-            <label class="checkbox_news"><input type="checkbox" name="news" value="news"> Новости</label>
-            <label class="checkbox_gallery"><input type="checkbox" name="gallery" value="gallery"> Галерея</label>
-            <label class="checkbox_shopping_cart"><input type="checkbox" name="shopping_cart" value="shopping_cart"> Корзина</label>
-
-            <button type="button">Показать</button>
+            <fieldset>
+              <legend>сетка:</legend>
+              <ul>
+                <li><label class="radio_adaptive"><input type="radio" name="grid" value="adaptive" checked> Адаптивная</label></li>
+                <li><label class="radio_fixed"><input type="radio" name="grid" value="fixed"> Фиксированная</label></li>
+                <li><label class="radio_rubber"><input type="radio" name="grid" value="rubber"> Резиновая</label></li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>особенности:</legend>
+              <ul>
+                <li><label class="checkbox_slider"><input type="checkbox" name="slider" value="slider" checked> Слайдер</label></li>
+                <li><label class="checkbox_advantage"><input type="checkbox" name="advantage" value="advantage"> Блок преимуществ</label></li>
+                <li><label class="checkbox_news"><input type="checkbox" name="news" value="news" checked> Новости</label></li>
+                <li><label class="checkbox_gallery"><input type="checkbox" name="gallery" value="gallery"> Галерея</label></li>
+                <li><label class="checkbox_shopping_cart"><input type="checkbox" name="shopping_cart" value="shopping_cart"> Корзина</label></li>
+              </ul>
+            </fieldset>
+            <button type="submit">Показать</button>
           </form>
         </div>
         <div class="sort">
           <p>Сортировать:</p>
           <ul>
-            <li><a href="">по цене</a></li>
-            <li><a href="">по типу </a></li>
-            <li><a href="">по названию</a></li>
+            <li><a href="#">по цене</a></li>
+            <li><a href="#">по типу </a></li>
+            <li><a href="#">по названию</a></li>
           </ul>
-          <div class="switch">
-            <a href="" class="triangle-up"></a>
-            <a href="" class="triangle-down"></a>
+          <div class="switch"><!--Как по другому подписать данное действие и в тоже время скрыть его - не нашел, label здесь не встал, валидатор не пустил-->
+            <a href="#" class="triangle_up" id="id_triangle_up"><span class="visually_hidden">Сортировать по возрастанию стоимости</span></a>
+            <a href="#" class="triangle_down" id="id_triangle_down"><span class="visually_hidden">Сортировать по убыванию стоимости</span></a>
           </div>
           
           <section class="cards"> <!--Контейнер для построения сетки из карточек товаров в нем все карточки сайтов-->
@@ -144,6 +150,18 @@
           <p class="address">191186, Санкт-Петербург,ул. Б. Конюшенная, д. 19/8</p>
           <p class="phone">тел. +7 (812) 275-75-75</p>
           <a href="#">напишите нам</a>
+          <div class="contact_form hidden">
+            <h4>Напишите нам</h4>
+            <button class="close_cross visually_hidden" type="button">закрыть</button><!--Выполняет действие-закрытие всплывающего окна, если это переход/загрузка заново окна каталога тогда это ссылка-->
+            <form class="message" method="post" action="https://echo.htmlacademy.ru">
+              <ul>
+                <li><label>Ваше имя:    <input type="text" name="contact_name" placeholder="Имя Фамилия"></label></li>
+                <li><label>Ваш e-mail:  <input type="email" name="contact_email" placeholder="email@example.com"></label></li>
+                <li><label>Текст письма:<textarea name="contact_textarea" placeholder="В свободной форме" rows="6" cols="80"></textarea></label></li>
+              </ul>
+              <button type="submit">отправить</button>
+            </form>
+          </div>
         </div>
       </div>
       <!-- Социальные сети -->
