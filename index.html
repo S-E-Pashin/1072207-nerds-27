@@ -44,9 +44,9 @@
           <!-- Нехватает переключателя справа активно-->
         </div>
         <div class="switch_box">
-          <input type="radio" name="switch_slide" value="slider_first" checked>
-          <input type="radio" name="switch_slide" value="slider_second">
-          <input type="radio" name="switch_slide" value="slider_third">
+          <button class="switch_slide" type="button" value="slider_first"></button>
+          <button class="switch_slide" type="button" value="slider_second"></button>
+          <button class="switch_slide" type="button" value="slider_third"></button>
         </div>
       </div>
       <!-- Общая секция - услуги -->
@@ -114,18 +114,6 @@
           <p class="address">191186, Санкт-Петербург,ул. Б. Конюшенная, д. 19/8</p>
           <p class="phone">тел. +7 (812) 275-75-75</p>
           <a href="#">напишите нам</a>
-          <div class="contact_form hidden">
-            <h4>Напишите нам</h4>
-            <button class="close-cross visually-hidden" type="button">закрыть</button><!--Выполняет действие-закрытие всплывающего окна-->
-            <form class="message" method="post" action="https://echo.htmlacademy.ru">
-              <ul>
-                <li><label>Ваше имя:    <input type="text" name="contact_name" placeholder="Имя Фамилия"></label></li>
-                <li><label>Ваш e-mail:  <input type="email" name="contact_email" placeholder="email@example.com"></label></li>
-                <li><label>Текст письма:<textarea name="contact_textarea" placeholder="В свободной форме" rows="6" cols="80"></textarea></label></li>
-              </ul>
-              <button type="submit">отправить</button>
-            </form>
-          </div>
         </div>
       </div>
       <!-- Социальные сети -->
@@ -146,7 +134,18 @@
         <p class="text">Скидка 10% для друзей из социальных сетей.</p>
       </div>
     </footer>
-
+    <div class="contact_form hidden"><!--Модальное/всплывающее окно-->
+      <h4>Напишите нам</h4>
+      <button class="close-cross visually-hidden" type="button">закрыть</button><!--Выполняет действие-закрытие всплывающего окна-->
+      <form class="message" method="post" action="https://echo.htmlacademy.ru">
+        <ul>
+          <li><label>Ваше имя:    <input type="text" name="contact_name" placeholder="Имя Фамилия"></label></li>
+          <li><label>Ваш e-mail:  <input type="email" name="contact_email" placeholder="email@example.com"></label></li>
+          <li><label>Текст письма:<textarea name="contact_textarea" placeholder="В свободной форме" rows="6" cols="80"></textarea></label></li>
+        </ul>
+        <button type="submit">отправить</button>
+      </form>
+    </div>
   </body>
 </html>
 <!-- Комментарий для  H1. На главных страницах не всегда рисуют заголовок первого уровня. 
