@@ -1,48 +1,9 @@
-/* roboto-regular - latin_cyrillic */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/roboto-v20-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
-  src: local('Roboto'), local('Roboto-Regular'),
-       url('../fonts/roboto-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/roboto-v20-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/roboto-v20-latin_cyrillic-regular.svg#Roboto') format('svg'); /* Legacy iOS */
-}
-/* roboto-500 - latin_cyrillic */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../fonts/roboto-v20-latin_cyrillic-500.eot'); /* IE9 Compat Modes */
-  src: local('Roboto Medium'), local('Roboto-Medium'),
-       url('../fonts/roboto-v20-latin_cyrillic-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/roboto-v20-latin_cyrillic-500.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/roboto-v20-latin_cyrillic-500.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/roboto-v20-latin_cyrillic-500.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/roboto-v20-latin_cyrillic-500.svg#Roboto') format('svg'); /* Legacy iOS */
-}
-/* roboto-700 - latin_cyrillic */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/roboto-v20-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
-  src: local('Roboto Bold'), local('Roboto-Bold'),
-       url('../fonts/roboto-v20-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/roboto-v20-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/roboto-v20-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/roboto-v20-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/roboto-v20-latin_cyrillic-700.svg#Roboto') format('svg'); /* Legacy iOS */
-}
 body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 24px;
   text-align: left;
   color: #283136;
@@ -60,23 +21,24 @@ a {
 .nerds_logo:active {
   opacity: 0.3;
 }
-.navigation li, .navigation a {
+.navigation li {
+  list-style: none;
+}
+.navigation a, .basket {
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
   color: #283136;
   text-transform: uppercase;
-  list-style: none;
 }
-.navigation li:hover, .navigation a:hover {
+.navigation a:hover, .basket:hover {
   color: #fb565a;
 }
-.navigation li:active, .navigation a:active {
-  color: rgba(0, 0, 0, 0.3);
-  
+.navigation a:focus, .basket:focus,
+.navigation a:active, .basket:active {
+  color: rgba(0, 0, 0, 0.3); 
 }
-
-.navigation li:focus, .navigation a:focus {
+.active_page {
   border-bottom: 2px solid #fb565a;
 }
 .services li {
@@ -84,37 +46,34 @@ a {
 }
 .services h3 {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 30px;
   color: black;
   text-transform: uppercase;
 }
 .button {
-  font: inherit;
+  font-size: 16px;
   font-weight: 500;
   line-height: 18px;
   text-align: center;
   color: #ffffff;
+  background-color: #eeeeee;
   text-transform: uppercase;
 }
 .web_site .button {
   background-color: #fb565a;
 }
 .web_site .button:hover {
-  color: #ffffff;
   background-color: #e74246;
-  
 }
 .web_site .button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #d7373b;
 }
 .applications .button {
-  font: inherit;
   background-color: #00ca74;
 }
 .applications .button:hover {
-  color: #ffffff;
   background-color: #00bc6c;
 }
 .applications .button:active {
@@ -122,46 +81,44 @@ a {
   background-color: #00aa62;
 }
 .presentations .button {
-  font: inherit;
   background-color: #efc84a;
 }
 .presentations .button:hover {
-  color: #ffffff;
   background-color: #eab534;
 }
 .presentations .button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #e5a722;
 }
-.credo p:first-child {
+.credo_header {
   font-size: 45px;
   font-weight: 500;
   line-height: 45px;
   color: #000000;
 }
 .credo h3 {
-  font-weight: bold;
+  font-weight: 700;
   color: #000000;
 }
 .credo li {
   list-style: none;
 }
 .results th {
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   color: #000000;
 }
 .results tr {
   line-height: 18px;
 }
-.results tr:nth-child(2) {
+.results_progress {
   font-size: 45px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 10px;
 }
 .contacts h4 {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 30px;
   color: #000000;
 }
@@ -170,16 +127,15 @@ a {
   color: #666666;
 }
 .contacts .button {
-  font: inherit;
   background-color: #fb565a;
 }
 .offer p {
   line-height: 22px;
   color: #444444;
 }
-.offer p:first-child {
+.offer .title {
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 36px;
   color: #000000;
 }
@@ -192,7 +148,7 @@ a {
 }
 .filter legend {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 30px;
   color: #000000;
   text-transform: uppercase;
@@ -200,7 +156,6 @@ a {
 .filter li {
   line-height: 20px;
   list-style: none;
-  
 }
 /* Не понимаю как они реализуют наведение, может быть это просто две картинки разные?
 .filter li:hover {
@@ -212,25 +167,23 @@ a {
 }*/
 .filter .button, .page_switch .button {
   color: #000000;
-  background-color: #eeeeee;
-  
 }
 .filter .button:hover, .page_switch .button:hover {
   color: #000000;
   background-color: #dfdfdf;
+}
+.filter .button:focus, .page_switch .button:focus {
+  color: #000000;
+  border: 3px solid #dbdbdb;
 }
 .filter .button:active, .page_switch .button:active {
   color: rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
 }
-.filter .button:focus, .page_switch .button:focus {
-  color: #000000;
-  border: 3px solid #dbdbdb;
-}
-.wrapper h3 a {
+.wrapper a {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 30px;
   text-align: center;
   color: #000000;
@@ -248,7 +201,6 @@ a {
   color: #666666;
 }
 .wrapper .button {
-  font: inherit;
   background-color: #fb565a;
 }
 .wrapper .button:hover {
@@ -258,7 +210,6 @@ a {
   background-color: #d7373b;
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
 }
-
 .page_switch {
   list-style: none;
 }
