@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Нёрдс-главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="nerds_logo">
         <a href="index.html">
           <img src="img/image_content/nerds_logo.svg" alt="Изображение логотипа компании Нёрдс" width="160" height="65">
         </a>
       </div>
-      <nav>
+      <nav class="navigation">
         <ul>
           <li><a href="index.html#id_about_us">студия</a></li>
           <li><a href="index.html#id_customer">клиенты</a></li>
@@ -24,7 +26,7 @@
           </a>
     </header>
     <main>
-        <h1>Магазин готовых шаблонов</h1>
+        <h1 class="main_head">Магазин готовых шаблонов</h1>
         <div class="filter">
           стоимость:
           от до
@@ -48,7 +50,7 @@
                 <li><label class="checkbox_shopping_cart"><input type="checkbox" name="shopping_cart" value="shopping_cart"> Корзина</label></li>
               </ul>
             </fieldset>
-            <button type="submit">Показать</button>
+            <button class="button" type="submit">Показать</button>
           </form>
         </div>
         <div class="sort">
@@ -58,7 +60,7 @@
             <li><a href="#">по типу </a></li>
             <li><a href="#">по названию</a></li>
           </ul>
-          <div class="switch"><!--Как по другому подписать данное действие и в тоже время скрыть его - не нашел, label здесь не встал, валидатор не пустил-->
+          <div class="switch">
             <a href="#" class="triangle_up" id="id_triangle_up"><span class="visually_hidden">Сортировать по возрастанию стоимости</span></a>
             <a href="#" class="triangle_down" id="id_triangle_down"><span class="visually_hidden">Сортировать по убыванию стоимости</span></a>
           </div>
@@ -71,7 +73,7 @@
               <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
                 <h3><a href="#" class="card_price">sedona</a></h3><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
                 <p>Информационный сайт для туристов</p>
-                <button type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+                <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
               </div>
             </div>
             </article>
@@ -82,7 +84,7 @@
               <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
                 <h3><a href="#" class="card_price">PINK APP</a></h3><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
                 <p>Продуктовый лендинг приложения для iOS и Android</p>
-                <button type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+                <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
               </div>
             </div>
             </article>
@@ -93,7 +95,7 @@
               <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
                 <h3><a href="#" class="card_price">BARBERSHOP</a></h3><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
                 <p>Сайт салона красоты.Для мужчин, да.</p>
-                <button type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+                <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
               </div>
             </div>
             </article>
@@ -104,7 +106,7 @@
               <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
                 <h3><a href="#" class="card_price">MISHKA</a></h3><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
                 <p>Интернет-магазин вязаных игрушек</p>
-                <button type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+                <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
               </div>
             </div>
             </article>
@@ -115,7 +117,7 @@
               <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
                 <h3><a href="#" class="card_price">A PLUS</a></h3><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
                 <p>Лендинг курсов повышения квалификации</p>
-                <button type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+                <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
               </div>
             </div>
             </article>
@@ -126,7 +128,7 @@
               <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
                 <h3><a href="#" class="card_price">КВАСТ</a></h3><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
                 <p>Промо-сайт производителя крафтового кваса</p>
-                <button type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+                <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
               </div>
             </div>
             </article>
@@ -134,10 +136,10 @@
           </section>
 
           <ul class="page_switch">
-            <li><a href="#">1</a ></li>
-            <li><a href="#">2</a ></li>
-            <li><a href="#">3</a ></li>
-            <li><a href="#">следующая</a></li>
+            <li><a class="button" href="#">1</a ></li>
+            <li><a class="button" href="#">2</a ></li>
+            <li><a class="button" href="#">3</a ></li>
+            <li><a class="button" href="#">следующая</a></li>
           </ul>
         </div>
     </main>
@@ -149,19 +151,7 @@
           <h4>NЁRDS DESIGN STUDIO</h4>
           <p class="address">191186, Санкт-Петербург,ул. Б. Конюшенная, д. 19/8</p>
           <p class="phone">тел. +7 (812) 275-75-75</p>
-          <a href="#">напишите нам</a>
-          <div class="contact_form hidden">
-            <h4>Напишите нам</h4>
-            <button class="close_cross visually_hidden" type="button">закрыть</button><!--Выполняет действие-закрытие всплывающего окна, если это переход/загрузка заново окна каталога тогда это ссылка-->
-            <form class="message" method="post" action="https://echo.htmlacademy.ru">
-              <ul>
-                <li><label>Ваше имя:    <input type="text" name="contact_name" placeholder="Имя Фамилия"></label></li>
-                <li><label>Ваш e-mail:  <input type="email" name="contact_email" placeholder="email@example.com"></label></li>
-                <li><label>Текст письма:<textarea name="contact_textarea" placeholder="В свободной форме" rows="6" cols="80"></textarea></label></li>
-              </ul>
-              <button type="submit">отправить</button>
-            </form>
-          </div>
+          <a class="button" href="#">напишите нам</a>
         </div>
       </div>
       <!-- Социальные сети -->
@@ -182,6 +172,17 @@
         <p class="text">Скидка 10% для друзей из социальных сетей.</p>
       </div>
     </footer>
-
+    <div class="contact_form hidden"><!--Модальное/всплывающее окно-->
+      <h4>Напишите нам</h4>
+      <button class="close_cross visually_hidden" type="button">закрыть</button><!--Выполняет действие-закрытие всплывающего окна-->
+      <form class="message" method="post" action="https://echo.htmlacademy.ru">
+        <ul>
+          <li><label>Ваше имя:    <input type="text" name="contact_name" placeholder="Имя Фамилия"></label></li>
+          <li><label>Ваш e-mail:  <input type="email" name="contact_email" placeholder="email@example.com"></label></li>
+          <li><label>Текст письма:<textarea name="contact_textarea" placeholder="В свободной форме" rows="6" cols="80"></textarea></label></li>
+        </ul>
+        <button type="submit">отправить</button>
+      </form>
+    </div>
   </body>
 </html>
