@@ -1,4 +1,6 @@
 body {
+  width: 1440px;
+  min-height: 2476px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", "Arial", sans-serif;
@@ -13,7 +15,17 @@ a {
   text-decoration: none;
 }
 .header {
+  padding-top: 49px;
+  padding-bottom: 18px;
   background-color: #eeeeee;
+}
+.header_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 140px;
+  margin-left: 140px;
 }
 .nerds_logo:hover {
   opacity: 0.8;
@@ -21,8 +33,29 @@ a {
 .nerds_logo:active {
   opacity: 0.3;
 }
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-grow: 1;
+}
+.navigation ul {
+  display: flex;
+  flex-direction: row;
+  /* Странно работает, у "Студии" слева как будто внешний отступ влево, ниже решение есть, помечу, немогу понять в чем причина. */
+  justify-content: space-between;
+  align-items: center;
+  min-width: 440px;
+}
 .navigation li {
   list-style: none;
+}
+/*  Вот то место о котором говорится выше,отступ на 40пикселей, откуда-непонятно. Может это остатки от элементов писка которые скрыты?  */
+.navigation li:first-child {
+  margin-left: -40px;
+}
+.navigation li:last-child {
+  /* margin-left: 45px; */
 }
 .navigation a, .basket {
   font-size: 16px;
@@ -40,6 +73,20 @@ a {
 }
 .active_page {
   border-bottom: 2px solid #fb565a;
+}
+.services {
+  margin-top: 80px;
+  margin-right:140px;
+  margin-left: 140px;
+}
+.services ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left:  -40px;
+}
+.services_column {
+  width: 300px;
 }
 .services li {
   list-style: none;
@@ -80,6 +127,9 @@ a {
   color: rgba(255, 255, 255, 0.3);
   background-color: #00aa62;
 }
+.presentations {
+  margin-right: 60px;
+}
 .presentations .button {
   background-color: #efc84a;
 }
@@ -89,6 +139,22 @@ a {
 .presentations .button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #e5a722;
+}
+.about_us {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 140px;
+  margin-left: 141px;
+}
+.about_us .column_left {
+  max-width: 654px;
+}
+.about_us .column_right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 360px;
 }
 .credo_header {
   font-size: 45px;
@@ -116,6 +182,34 @@ a {
   font-weight: 700;
   line-height: 10px;
 }
+.customer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 124px;
+  margin-right: 140px;
+  margin-bottom: 126px;
+  margin-left: 140px;
+  list-style: none;
+}
+.footer_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.map {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  min-width: 1440px;
+  min-height: 416px;
+}
+.contacts {
+margin-top: 54px;
+margin-bottom: 54px;
+margin-left: 140px;
+min-width: 319px;
+min-height: 308px;
+}
 .contacts h4 {
   font-size: 18px;
   font-weight: 700;
@@ -129,6 +223,24 @@ a {
 .contacts .button {
   background-color: #fb565a;
 }
+.social_offer_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 140px;
+  margin-left: 140px;
+}
+.social_network {
+  display: flex;
+  justify-content: space-between;
+  min-width: 260px;
+  list-style: none;
+}
+.social_network li {
+  width: 79px;
+}
+.social_network li:first-child {
+  margin-left: -40px;
+}
 .offer p {
   line-height: 22px;
   color: #444444;
@@ -139,13 +251,31 @@ a {
   line-height: 36px;
   color: #000000;
 }
+.main_big {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
 .main_head {
+  margin-top: 0px;
+  padding-top: 82px;
+  padding-bottom: 116px;
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
   text-align: center;
   color: #000000;
   background-color: #eeeeee;
+}
+.filter_sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 140px;
+  margin-left: 140px;
+}
+.filter {
+  margin-right: 140px;
 }
 .filter legend {
   font-size: 18px;
@@ -158,14 +288,42 @@ a {
   line-height: 20px;
   list-style: none;
 }
-/* Не понимаю как они реализуют наведение, может быть это просто две картинки разные?
-.filter li:hover {
+.sort {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
 }
-*/
-/*  не понимаю что использовать для так называемого заблокированного */
-/*.filter li: {
-  
-}*/
+.sort_switch {
+  display: flex;
+  flex-direction: row;
+}
+.sort_switch ul {
+  display: flex;
+  list-style: none;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cards article {
+  max-width: 360px;
+  /* max-height: 576px; */
+}
+.page_switch {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 60px;
+    list-style: none;
+}
+.page_switch li   {
+  margin-right: 11px;
+}
+.page_switch li:first-child   {
+  margin-left: -40px;
+}
 .filter .button, .page_switch .button {
   color: #000000;
 }
@@ -210,7 +368,4 @@ a {
 .wrapper .button:active {
   background-color: #d7373b;
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
-}
-.page_switch {
-  list-style: none;
 }

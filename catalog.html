@@ -9,64 +9,70 @@
   </head>
   <body>
     <header class="header">
-      <div class="nerds_logo">
-        <a href="index.html">
-          <img src="img/image_content/nerds_logo.svg" alt="Изображение логотипа компании Нёрдс" width="160" height="65">
-        </a>
-      </div>
-      <nav class="navigation">
-        <ul>
-          <li><a href="index.html#id_about_us">студия</a></li>
-          <li><a href="index.html#id_customer">клиенты</a></li>
-          <li><a class="active_page" href="#">магазин</a></li>
-          <li><a href="#id_contacts">контакты</a></li>
-        </ul>
-      </nav>
-      <a class="basket" href="#">корзина</a>
-    </header>
-    <main>
-        <h1 class="main_head">Магазин готовых шаблонов</h1>
-        <div class="filter">
-          стоимость:
-          от до
-          <form method="get"
-                action="https://echo.htmlacademy.ru">
-            <fieldset>
-              <legend>сетка:</legend>
-              <ul>
-                <li><label class="radio_adaptive"><input type="radio" name="grid" value="adaptive" checked> Адаптивная</label></li>
-                <li><label class="radio_fixed"><input type="radio" name="grid" value="fixed"> Фиксированная</label></li>
-                <li><label class="radio_rubber"><input type="radio" name="grid" value="rubber"> Резиновая</label></li>
-              </ul>
-            </fieldset>
-            <fieldset>
-              <legend>особенности:</legend>
-              <ul>
-                <li><label class="checkbox_slider"><input type="checkbox" name="slider" value="slider" checked> Слайдер</label></li>
-                <li><label class="checkbox_advantage"><input type="checkbox" name="advantage" value="advantage"> Блок преимуществ</label></li>
-                <li><label class="checkbox_news"><input type="checkbox" name="news" value="news" checked> Новости</label></li>
-                <li><label class="checkbox_gallery"><input type="checkbox" name="gallery" value="gallery"> Галерея</label></li>
-                <li><label class="checkbox_shopping_cart"><input type="checkbox" name="shopping_cart" value="shopping_cart"> Корзина</label></li>
-              </ul>
-            </fieldset>
-            <button class="button" type="submit">Показать</button>
-          </form>
+      <div class="header_wrapper">
+        <div class="nerds_logo">
+          <a href="index.html">
+            <img src="img/image_content/nerds_logo.svg" alt="Изображение логотипа компании Нёрдс" width="160" height="65">
+          </a>
         </div>
-        <div class="sort">
-          <p>Сортировать:</p>
+        <nav class="navigation">
           <ul>
-            <li><a href="#">по цене</a></li>
-            <li><a href="#">по типу </a></li>
-            <li><a href="#">по названию</a></li>
+            <li><a href="index.html#id_about_us">студия</a></li>
+            <li><a href="index.html#id_customer">клиенты</a></li>
+            <li><a class="active_page" href="#">магазин</a></li>
+            <li><a href="#id_contacts">контакты</a></li>
           </ul>
-          <div class="switch">
-            <a href="#" class="triangle_up" id="id_triangle_up"><span class="visually_hidden">Сортировать по возрастанию стоимости</span></a>
-            <a href="#" class="triangle_down" id="id_triangle_down"><span class="visually_hidden">Сортировать по убыванию стоимости</span></a>
-          </div>
-          
-          <section class="cards"> <!--Контейнер для построения сетки из карточек товаров в нем все карточки сайтов-->
+        </nav>
+        <a class="basket" href="#">корзина</a>
+      </div>
+    </header>
 
-            <article class="card_sedona"><!--SEDONA/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
+    <main class="main_big_catalog">
+        <h1 class="main_head">Магазин готовых шаблонов</h1>
+        <section class="filter_sort">
+          <div class="filter">
+            стоимость:
+            от до
+            <form method="get"
+                  action="https://echo.htmlacademy.ru">
+              <fieldset>
+                <legend>сетка:</legend>
+                <ul>
+                  <li><label class="radio_adaptive"><input type="radio" name="grid" value="adaptive" checked> Адаптивная</label></li>
+                  <li><label class="radio_fixed"><input type="radio" name="grid" value="fixed"> Фиксированная</label></li>
+                  <li><label class="radio_rubber"><input type="radio" name="grid" value="rubber"> Резиновая</label></li>
+                </ul>
+              </fieldset>
+              <fieldset>
+                <legend>особенности:</legend>
+                <ul>
+                  <li><label class="checkbox_slider"><input type="checkbox" name="slider" value="slider" checked> Слайдер</label></li>
+                  <li><label class="checkbox_advantage"><input type="checkbox" name="advantage" value="advantage"> Блок преимуществ</label></li>
+                  <li><label class="checkbox_news"><input type="checkbox" name="news" value="news" checked> Новости</label></li>
+                  <li><label class="checkbox_gallery"><input type="checkbox" name="gallery" value="gallery"> Галерея</label></li>
+                  <li><label class="checkbox_shopping_cart"><input type="checkbox" name="shopping_cart" value="shopping_cart"> Корзина</label></li>
+                </ul>
+              </fieldset>
+              <button class="button" type="submit">Показать</button>
+            </form>
+          </div>
+          <div class="sort">
+            <div class="sort_switch">
+              <p>Сортировать:</p>
+              <ul>
+                <li><a href="#">по цене</a></li>
+                <li><a href="#">по типу </a></li>
+                <li><a href="#">по названию</a></li>
+              </ul>
+              <div class="switch">
+                <a href="#" class="triangle_up" id="id_triangle_up"><span class="visually_hidden">Сортировать по возрастанию стоимости</span></a>
+                <a href="#" class="triangle_down" id="id_triangle_down"><span class="visually_hidden">Сортировать по убыванию стоимости</span></a>
+              </div>
+            </div>
+
+            <section class="cards"> <!--Контейнер для построения сетки из карточек товаров в нем все карточки сайтов-->
+
+              <article class="card_sedona"><!--SEDONA/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
             <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
               <img src="img/image_content/img_sedona_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
               <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
@@ -75,9 +81,9 @@
                 <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
               </div>
             </div>
-            </article>
+              </article>
 
-            <article class="card_pink"><!--Pink App/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
+              <article class="card_pink"><!--Pink App/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
             <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
               <img src="img/image_content/img_pink_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
               <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
@@ -86,9 +92,9 @@
                 <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
               </div>
             </div>
-            </article>
+              </article>
 
-            <article class="card_barbershop"><!--Barbershop/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
+              <article class="card_barbershop"><!--Barbershop/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
             <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
               <img src="img/image_content/img_barbershop_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
               <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
@@ -97,9 +103,9 @@
                 <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
               </div>
             </div>
-            </article>
+              </article>
 
-            <article class="card_mishka"><!--MISHKA/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
+              <article class="card_mishka"><!--MISHKA/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
             <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
               <img src="img/image_content/img_mishka_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
               <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
@@ -108,9 +114,9 @@
                 <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
               </div>
             </div>
-            </article>
+              </article>
 
-            <article class="card_a_plus"><!--A Plus/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
+              <article class="card_a_plus"><!--A Plus/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
             <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
               <img src="img/image_content/img_aplus_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
               <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
@@ -119,9 +125,9 @@
                 <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
               </div>
             </div>
-            </article>
+              </article>
 
-            <article class="card_kvast"><!--КВАСТ/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
+              <article class="card_kvast"><!--КВАСТ/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
             <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
               <img src="img/image_content/img_kvast_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
               <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
@@ -130,19 +136,20 @@
                 <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
               </div>
             </div>
-            </article>
+              </article>
 
-          </section>
+            </section>
 
-          <ul class="page_switch">
-            <li><a class="button  button" href="#">1</a ></li>
-            <li><a class="button  button" href="#">2</a ></li>
-            <li><a class="button  button" href="#">3</a ></li>
-            <li><a class="button  button" href="#">следующая</a></li>
-          </ul>
-        </div>
+            <ul class="page_switch">
+              <li><a class="button  button" href="#">1</a ></li>
+              <li><a class="button  button" href="#">2</a ></li>
+              <li><a class="button  button" href="#">3</a ></li>
+              <li><a class="button  button" href="#">следующая</a></li>
+            </ul>
+          </div>
+        </section>
     </main>
-    <footer>
+    <footer class="footer_wrapper">
       <!-- карта -->
       <div class="map">
         <!-- контакты -->
@@ -155,20 +162,22 @@
       </div>
       <!-- Социальные сети -->
       <!--У иконок должны быть скрываемые подписи которые будут появляться если пропадет изображение иконок-->
-      <ul class="social_network">
-        <li>
-          <a class="icon_vk" href="https://vk.com/"></a>
-        </li>
-        <li>
-          <a class="icon_facebook" href="https://www.facebook.com/"></a>
-        </li>
-        <li>
-          <a class="icon_instagram" href="https://instagram.com/"></a></li>
-      </ul>
-      <!-- Предложение скидки -->
-      <div class="offer">
-        <p class="title"><b>Давайте дружить, это выгодно!</b></p>
-        <p class="text">Скидка 10% для друзей из социальных сетей.</p>
+      <div class="social_offer_wrapper">
+        <ul class="social_network">
+          <li>
+            <a class="icon_vk" href="https://vk.com/"></a>
+          </li>
+          <li>
+            <a class="icon_facebook" href="https://www.facebook.com/"></a>
+          </li>
+          <li>
+            <a class="icon_instagram" href="https://instagram.com/"></a></li>
+        </ul>
+        <!-- Предложение скидки -->
+        <div class="offer">
+          <p class="title"><b>Давайте дружить, это выгодно!</b></p>
+          <p class="text">Скидка 10% для друзей из социальных сетей.</p>
+        </div>
       </div>
     </footer>
     <div class="contact_form hidden"><!--Модальное/всплывающее окно-->

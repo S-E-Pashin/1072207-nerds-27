@@ -9,23 +9,25 @@
   </head>
   <body>
     <header class="header">
-      <div class="nerds_logo">
-        <a href="index.html">
-          <img src="img/image_content/nerds_logo.svg" alt="Логотип студии Нёрдс" width="160" height="65">
-        </a>
+      <div class="header_wrapper">
+        <div class="nerds_logo">
+          <a href="index.html">
+            <img src="img/image_content/nerds_logo.svg" alt="Логотип студии Нёрдс" width="160" height="65">
+          </a>
+        </div>
+        <nav class="navigation">
+          <ul>
+            <li><a href="#id_about_us">студия</a></li>
+            <li><a href="#id_customer">клиенты</a></li>
+            <li><a href="catalog.html">магазин</a></li>
+            <li><a href="#id_contacts">контакты</a></li>
+          </ul>
+        </nav>
+        <a class="basket" href="#">корзина</a>
       </div>
-      <nav class="navigation">
-        <ul>
-          <li><a href="#id_about_us">студия</a></li>
-          <li><a href="#id_customer">клиенты</a></li>
-          <li><a href="catalog.html">магазин</a></li>
-          <li><a href="#id_contacts">контакты</a></li>
-        </ul>
-      </nav>
-      <a class="basket" href="#">корзина</a>
     </header>
 
-    <main>
+    <main class="main_big">
       <!-- Cлайдер -->
       <div class="sliders">
         <div class="first">
@@ -94,7 +96,7 @@
             <img class="results_logo" src="img/image_content/nerds_picture.png" alt="Дизайнерский логотип студии Нёрдс" width="360" height="208">
             <table>
               <tr><th colspan="3">с 2004 года Любим точность во всем:</th></tr>
-              <tr class="results_progress"><td>146%      </td><td>   100%    </td><td>50%        </td></tr>
+              <tr class="results_progress"><td>146%      </td><td>   100%    </td><td>50%</td></tr>
               <tr><td>Уровень   </td><td> Соблюдение</td><td>Минимальная</td></tr>
               <tr><td>самоотдачи</td><td> сроков    </td><td>предоплата </td></tr>
             </table>
@@ -110,7 +112,7 @@
       
     </main>
 
-    <footer>
+    <footer class="footer_wrapper">
       <!-- карта -->
       <div class="map">
         <!-- контакты -->
@@ -123,20 +125,22 @@
       </div>
       <!-- Социальные сети -->
       <!--У иконок должны быть скрываемые подписи которые будут появляться если пропадет изображение иконок-->
-      <ul class="social_network">
-        <li>
-          <a class="icon_vk" href="https://vk.com/"></a>
-        </li>
-        <li>
-          <a class="icon_facebook" href="https://www.facebook.com/"></a>
-        </li>
-        <li>
-          <a class="icon_instagram" href="https://instagram.com/"></a></li>
-      </ul>
-      <!-- Предложение скидки -->
-      <div class="offer">
-        <p class="title"><b>Давайте дружить, это выгодно!</b></p>
-        <p class="text">Скидка 10% для друзей из социальных сетей.</p>
+      <div class="social_offer_wrapper">
+        <ul class="social_network">
+          <li>
+            <a class="icon_vk" href="https://vk.com/"></a>
+          </li>
+          <li>
+            <a class="icon_facebook" href="https://www.facebook.com/"></a>
+          </li>
+          <li>
+            <a class="icon_instagram" href="https://instagram.com/"></a></li>
+        </ul>
+        <!-- Предложение скидки -->
+        <div class="offer">
+          <p class="title"><b>Давайте дружить, это выгодно!</b></p>
+          <p class="text">Скидка 10% для друзей из социальных сетей.</p>
+        </div>
       </div>
     </footer>
     <div class="contact_form hidden"><!--Модальное/всплывающее окно-->
