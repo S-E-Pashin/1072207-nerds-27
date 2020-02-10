@@ -60,6 +60,21 @@ a {
 .navigation li:last-child {
   margin-right: 0px;
 }
+.basket {
+  position: relative;
+}
+.basket::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 26px;
+  background-image: url("/img/image_decorative/basket_icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color:;
+  opacity: 0.3;
+}
 .navigation a, .basket {
   font-size: 16px;
   font-weight: 500;
