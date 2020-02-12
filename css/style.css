@@ -22,17 +22,19 @@ a {
 }
 .header {
   padding-top: 49px;
-  padding-bottom: 18px;
+  /* Убрано, соответствует указанному в макете но выглядит пока лишним. До согласования остается. */
+  /* padding-bottom: 18px; */
   background-color: #eeeeee;
 }
 .header_wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* Пока убираю до согласования, связа со флекс гров- жадностью из навигации */
+  /* justify-content: space-between; */
   align-items: center;
 }
 .nerds_logo {
-  margin-right: 202px;
+  margin-right: 201px;
 }
 .nerds_logo:hover {
   opacity: 0.8;
@@ -44,7 +46,9 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  flex-grow: 1;
+  /* Пока убираю жадность, если будет подтверждено - будет удалено. Пробую без нее.  */
+  /* flex-grow: 1; */
+  background-color: tomato;
 }
 .navigation ul {
   display: flex;
@@ -52,9 +56,22 @@ a {
   justify-content: space-between;
   align-items: center;
   padding-left: 0px;
+  background-color: skyblue;
 }
 .navigation li {
   list-style: none;
+  /* Убран и заменен на точечные для пиксель перфекта. */
+  /* margin-right: 45px; */
+  margin-top: 11px;
+  background-color: seagreen;
+}
+.navigation li:nth-child(1) {
+  margin-right: 45px;
+}
+.navigation li:nth-child(2) {
+  margin-right: 48px;
+}
+.navigation li:nth-child(3) {
   margin-right: 45px;
 }
 .navigation li:last-child {
@@ -62,19 +79,21 @@ a {
 }
 .basket {
   position: relative;
+  margin-left: 242px;
+  margin-top: 11px;
 }
 .basket::before {
   content: "";
   display: inline-block;
   width: 15px;
   height: 15px;
-  margin-right: 26px;
-  background-image: url("/img/image_decorative/basket_icon.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-color:;
-  opacity: 0.3;
+  margin-right: 27px;
+  background-image: url("../img/image_decorative/basket_icon.svg");
+  /* background-repeat: no-repeat; */
+  background-position: 2px 2px;
+  /* background-color:; */
 }
+
 .navigation a, .basket {
   font-size: 16px;
   font-weight: 500;
@@ -91,6 +110,19 @@ a {
 }
 .active_page {
   border-bottom: 2px solid #fb565a;
+}
+/*  */
+.sliders {
+  width: 1160px;
+  height: 413px;
+  background-color: black;
+  /* display: none; */
+}
+.second {
+  display: none;
+}
+.third {
+  display: none;
 }
 .services {
   margin-top: 80px;
@@ -374,4 +406,12 @@ min-height: 308px;
 .wrapper .button:active {
   background-color: #d7373b;
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+/* ----------------------- */
+body {
+  
+  color: red; 
+}
+.navigation li a {
+  color: red;
 }
