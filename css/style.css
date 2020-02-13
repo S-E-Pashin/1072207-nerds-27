@@ -50,6 +50,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
   /* Пока убираю жадность, если будет подтверждено - будет удалено. Пробую без нее.  */
   /* flex-grow: 1; */
 }
@@ -57,15 +58,17 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   padding-left: 0px;
 }
 .navigation li {
   list-style: none;
-  /* Убран и заменен на точечные для пиксель перфекта. */
-  /* margin-right: 45px; */
+  margin-right: 45px;
   margin-top: 11px;
 }
+/* Убрано для упрощения но ухудлает пиксель перфект. */
+/* 
 .navigation li:nth-child(1) {
   margin-right: 45px;
 }
@@ -74,13 +77,13 @@ a {
 }
 .navigation li:nth-child(3) {
   margin-right: 45px;
-}
+} */
 .navigation li:last-child {
   margin-right: 0px;
 }
 .basket {
   position: relative;
-  margin-left: 242px;
+  margin-left: 247px;
   margin-top: 11px;
 }
 .basket::before {
@@ -135,15 +138,15 @@ a {
   margin-top: 0px;
   padding-left: 0px;
 }
+
 .services_column {
   width: 300px;
 }
 .services li {
   list-style: none;
 }
-
 .services h3 {
-  margin-top: 26px;
+  margin-top: 20px;
   margin-bottom: 0px;
   font-size: 24px;
   font-weight: 700;
@@ -165,45 +168,52 @@ a {
   border-radius: 3px;
   text-transform: uppercase;
 }
-.advantage_picture {
+/* --------------------- */
+.services_column::before {
+  content: "";
+  display: inline-block;
   width: 300px;
   height: 146px;
+  margin-top: 7px;
   background-repeat: no-repeat;
   /* maybe left 84px bottom 35px but establish: */
   background-position: center;
 }
-.web_site .advantage_picture {
+.web_site::before {
   background-image: url(../img/image_decorative/advantage_picture_red_web_site.png);
   background-color: #fb565a;
 }
 .web_site p {
   width: 238px;
   word-spacing: -1px;
+  margin-top: 15px;
   margin-bottom: 45px;
 }
 .services_column span {
   white-space: nowrap;
 }
-.applications .advantage_picture {
+.applications::before {
   background-image: url(../img/image_decorative/advantage_picture_green_applications.png);
   background-color: #01ca78;
 }
 .applications p {
   width: 244px;
-  margin-left: 3px;
+  margin-top: 15px;
+  margin-left: 1px;
   word-spacing: 2px;
   margin-bottom: 45px;
 }
 .applications span {
   word-spacing: 1px;
 }
-.presentations .advantage_picture {
+.presentations::before {
   background-image: url(../img/image_decorative/advantage_picture_yellow_presentations.png);
   background-color: #efc849;
 }
 .presentations p {
   width: 213px;
-  margin-bottom: 45px;
+  margin-top: 14px;
+  margin-bottom: 46px;
 }
 .web_site .button {
   background-color: #fb565a;
@@ -329,53 +339,97 @@ a {
 }
 .results_progress td {
   /* margin-top: 49px; */
-  padding-top: 62px;
-  padding-bottom: 30px;
+  padding-top: 44px;
+  padding-bottom: 12px;
   /* padding-left: 2px; */
   font-size: 45px;
   font-weight: 700;
-  line-height: 10px;
+  line-height: 45px;
 }
 .results_progress td:nth-child(2) {
-  padding-left: 14px;
+  padding-left: 15px;
 }
 .results_progress td:nth-child(3) {
-  padding-left: 15px;
+  padding-left: 21px;
 }
 .results_text td {
   padding-top: 8px;
 }
 .results_text td:nth-child(2) {
-  padding-left: 14px;
+  padding-left: 16px;
 }
 .results_text td:nth-child(3) {
-  padding-left: 15px;
+  padding-left: 21px;
 }
-/* ПРОЦЕНТЫ В ТАБЛИЦЕ Перебрал много всего а значек не реагирует. Что еще можно сделать что бы его уменьшить? */
 .results_progress sup {
-  position: relative;
-  top: -13px;
-  right: 3px;
   padding-bottom: 20px;
-  /* height: 15px; */
-  /* transform: scale(0.5); */
+  font-size: 26px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .customer {
-  position: relative;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-evenly; */
-  /* margin-top: 68px; */
-  margin-bottom: 126px;
+  justify-content: space-around;
+  align-items: center;
   padding-left: 0px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  margin: 16px 0px 0px 0px;
   border-top: 2px solid #eeeeee;
   list-style: none;
 }
-.client_html_academy {
+.customer li {
+  position: relative;
+  right: 17px;
+  top: 1px;
+}
+.customer .client_mishka {
+  position: relative;
+  left: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Класс для не стилизованных отдельно элементов */
+/* .customer li {
+  position: relative;
+  padding-top: 50px;
+
+  padding-left: 90px;
+} */
+
+/* .client_html_academy {
   padding-left: 31px;
   padding-top: 62px;
-}
+} */
 .client_html_academy a::before {
   position: absolute;
   top: 64px;
@@ -385,10 +439,10 @@ a {
   content: "";
   background-color: #eeeeee;
 }
-.client_borodinski {
+/* .client_borodinski {
   padding-left: 96px;
   padding-top: 46px;
-}
+} */
 .client_borodinski a::before {
   position: absolute;
   top: 64px;
@@ -398,10 +452,10 @@ a {
   content: "";
   background-color: #eeeeee;
 }
-.client_pink {
+/* .client_pink {
   padding-left: 103px;
   padding-top: 65px;
-}
+} */
 .client_pink a::before {
   position: absolute;
   top: 64px;
@@ -411,12 +465,20 @@ a {
   content: "";
   background-color: #eeeeee;
 }
-.client_mishka {
+/* .client_mishka {
   padding-left: 121px;
   padding-top: 52px;
-}
-.customer li {
-  position: relative;
+} */
+.customer li::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+    top: 64px;
+    right: -51px;
+    width: 1px;
+    height: 42px;
+    padding-top: 10px;
+    background-color: red;
 }
 .footer_wrapper {
   display: flex;
@@ -428,6 +490,7 @@ a {
   width: 100%;
   min-height: 416px;
   margin: auto;
+  background-image: url(../img/image_decorative/map_adress.jpg);
 }
 .contacts {
 margin-top: 54px;
