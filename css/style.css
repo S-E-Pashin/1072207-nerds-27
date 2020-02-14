@@ -17,6 +17,23 @@ img {
 a {
   text-decoration: none;
 }
+.visually_hidden:not(:focus):not(:active),
+input[type="checkbox"].visually_hidden,
+input[type="radio"].visually_hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -385,11 +402,14 @@ a {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   padding-left: 0px;
   padding-top: 45px;
-  padding-bottom: 45px;
+  padding-bottom: 37px;
   margin: 16px 0px 0px 0px;
+  margin-top: 16px;
   border-top: 2px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
   list-style: none;
 }
 .customer li {
@@ -397,9 +417,24 @@ a {
   right: 17px;
   top: 1px;
 }
-.customer .client_mishka {
+
+.client_mishka {
   position: relative;
   left: 7px;
+}
+.client_mishka::after {
+  display: none;
+}
+.customer li::after {
+  content: "";
+  /* display: inline-block; */
+  position: absolute;
+  /* align-self: center; */
+  bottom: 23%;
+  left: 246px;
+  width: 2px;
+  height: 51px;
+  background-color: #eeeeee;
 }
 
 
@@ -417,8 +452,7 @@ a {
 
 
 
-
-/* Класс для не стилизованных отдельно элементов */
+/* Класс для не стилизованных отдельно элементов отменено до утверждения*/
 /* .customer li {
   position: relative;
   padding-top: 50px;
@@ -430,7 +464,7 @@ a {
   padding-left: 31px;
   padding-top: 62px;
 } */
-.client_html_academy a::before {
+/* .client_html_academy a::before {
   position: absolute;
   top: 64px;
   left: 279px;
@@ -438,12 +472,12 @@ a {
   height: 52px;
   content: "";
   background-color: #eeeeee;
-}
+} */
 /* .client_borodinski {
   padding-left: 96px;
   padding-top: 46px;
 } */
-.client_borodinski a::before {
+/* .client_borodinski a::before {
   position: absolute;
   top: 64px;
   left: 349px;
@@ -451,12 +485,12 @@ a {
   height: 52px;
   content: "";
   background-color: #eeeeee;
-}
+} */
 /* .client_pink {
   padding-left: 103px;
   padding-top: 65px;
 } */
-.client_pink a::before {
+/* .client_pink a::before {
   position: absolute;
   top: 64px;
   left: 344px;
@@ -464,22 +498,12 @@ a {
   height: 52px;
   content: "";
   background-color: #eeeeee;
-}
+} */
 /* .client_mishka {
   padding-left: 121px;
   padding-top: 52px;
 } */
-.customer li::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-    top: 64px;
-    right: -51px;
-    width: 1px;
-    height: 42px;
-    padding-top: 10px;
-    background-color: red;
-}
+
 .footer_wrapper {
   display: flex;
   flex-direction: column;
@@ -489,14 +513,20 @@ a {
   flex-direction: row;
   width: 100%;
   min-height: 416px;
-  margin: auto;
+  /* margin: auto; */
+  margin-top: 80px;
   background-image: url(../img/image_decorative/map_adress.jpg);
+  
 }
 .contacts {
-margin-top: 54px;
-margin-bottom: 54px;
-min-width: 319px;
-min-height: 308px;
+  margin-top: 54px;
+  margin-bottom: 54px;
+  margin-left: 0px;
+  padding-left: 50px;
+  padding-top: 25px;
+  width: 283px;
+  min-height: 308px;
+  background-color: #ffffff;
 }
 .contacts h4 {
   font-size: 18px;
@@ -505,37 +535,60 @@ min-height: 308px;
   color: #000000;
 }
 .contacts p {
+  width: 201px;
   line-height: 18px;
   color: #666666;
 }
+.phone {
+  margin-bottom: 52px;
+}
 .contacts .button {
+  padding-right: 50px;
   background-color: #fb565a;
 }
 .social_offer_wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .social_network {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   min-width: 260px;
+  padding-left: 0px;
   list-style: none;
 }
 .social_network li {
+  display: flex;
+  align-self: center;
   width: 79px;
+  height: 79px;
+  margin-top: 27px;
+  background-color: #e1e1e1;
+  border-radius: 50%;
 }
-.social_network li:first-child {
-  padding-left: 0px;
+.social_network a {
+  margin: auto;
 }
 .offer p {
+  /* margin-top: 49px;
+  margin-right: 218px; */
   line-height: 22px;
   color: #444444;
 }
 .offer .title {
+  margin-top: 46px;
+  margin-right: 218px;
+  margin-bottom: 0px;
   font-size: 36px;
   font-weight: 700;
   line-height: 36px;
   color: #000000;
+}
+.offer .text {
+  margin-top: 11px;
+  margin-right: 218px;
 }
 .main_big {
   display: flex;
@@ -660,3 +713,14 @@ min-height: 308px;
 .navigation li a {
   color: red;
 } */
+/* 
+margin-top: px;
+margin-right: px;
+margin-bottom: px;
+margin-left: px;
+padding-top: px;
+padding-right: px;
+padding-bottom: px;
+padding-left: px; */
+
+
