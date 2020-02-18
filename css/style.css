@@ -121,11 +121,12 @@ input[type="radio"].visually_hidden {
 /* Поправить шапку */
 
 .sliders {
+  position: relative;
   width: 1160px;
   height: 414px;
   padding: 0px;
-  margin: 0px;
   margin-top: -15px;
+  background-color: #eeeeee;
 }
 .sliders .button {
   display: inline-block;
@@ -235,14 +236,59 @@ input[type="radio"].visually_hidden {
 .third .button {
   margin-top: 22px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.switch_box {
+  position: absolute;
+  bottom: 79px;
+  left: 537px;
+  width: 88px;
+}
 .switch_box ul {
   display: flex;
-  position: absolute;
-  top: 412px;
-  left: 571px;
-
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
   list-style: none;
 }
+.switch_slide {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.switch_box li:active::before,
+.switch_box li:focus::before,
+.switch_box li:hover::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/image_decorative/active_button.svg");
+  background-repeat: no-repeat;
+}
+.switch_box li:first-child::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/image_decorative/active_button.svg");
+  background-repeat: no-repeat;
+}
+
+
+
+
 /* ------------------------------------ */
 .services {
   margin-top: 80px;
@@ -327,14 +373,24 @@ input[type="radio"].visually_hidden {
   margin-top: 14px;
   margin-bottom: 46px;
 }
+.product_card .button,
+.contacts .button,
+.sliders .button,
 .web_site .button {
   background-color: #fb565a;
 }
+.product_card .button:hover,
+.contacts .button:hover,
+.sliders .button:hover,
 .web_site .button:hover {
   background-color: #e74246;
 }
+.product_card .button:active,
+.contacts .button:active,
+.sliders .button:active,
 .web_site .button:active {
   color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
 }
 .applications .button {
@@ -345,6 +401,7 @@ input[type="radio"].visually_hidden {
 }
 .applications .button:active {
   color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #00aa62;
 }
 .presentations {
@@ -358,6 +415,7 @@ input[type="radio"].visually_hidden {
 }
 .presentations .button:active {
   color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #e5a722;
 }
 .about_us {
@@ -464,6 +522,10 @@ input[type="radio"].visually_hidden {
   padding-bottom: 20px;
   font-size: 26px;
 }
+
+
+
+
 .customer {
   display: flex;
   flex-direction: row;
@@ -483,6 +545,7 @@ input[type="radio"].visually_hidden {
   position: relative;
   right: 17px;
   top: 1px;
+  opacity: 0.2;
 }
 .client_mishka {
   position: relative;
@@ -500,6 +563,27 @@ input[type="radio"].visually_hidden {
   height: 51px;
   background-color: #eeeeee;
 }
+.customer li:hover {
+  opacity: 1;
+}
+.customer li:active {
+  opacity: 0.3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer_wrapper {
   display: flex;
   flex-direction: column;
@@ -561,6 +645,21 @@ input[type="radio"].visually_hidden {
   margin-top: 27px;
   background-color: #e1e1e1;
   border-radius: 50%;
+  cursor: pointer;
+}
+.social_network li:hover {
+  background-color: #e74246;
+}
+.social_network li:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  background-color: #d7373b;
+}
+.social_network li:active {
+  background-color: #d7373b;
+}
+li:active .icon {
+  opacity: 30%;
+  background-color: #d7373b;
 }
 .social_network a {
   margin: auto;
@@ -582,6 +681,17 @@ input[type="radio"].visually_hidden {
   margin-top: 11px;
   margin-right: 218px;
 }
+
+.main_big_sliders {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-content: space-between; */
+  width: 100%;
+  background-color: #eeeeee;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .main_big {
   display: flex;
   flex-direction: column;
@@ -798,6 +908,10 @@ input[type="radio"].visually_hidden {
   max-width: 360px;
   margin-bottom: 24px;
 }
+/* ---------------------------------- */
+/* Проверить возможность выполнения без отризательного внешнего отступа снизу. 
+Потенциально костыльное решение с отрицательным марджином на элементе, тут у тебя высота 60 стоит избыточная, нужно разобраться так чтобы без отрицального марджина можно было сделать. Попробуй проверить.
+*/
 .page_switch {
   margin-top: 0px;
   margin-bottom: -44px;
@@ -829,7 +943,7 @@ input[type="radio"].visually_hidden {
 }
 .filter .button:focus, .page_switch .button:focus {
   color: #000000;
-  border: 3px solid #dbdbdb;
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 .filter .button:active, .page_switch .button:active {
   color: rgba(0, 0, 0, 0.3);
