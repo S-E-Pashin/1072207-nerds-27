@@ -49,7 +49,7 @@
         </div>
         <div class="switch_box">
           <ul>
-            <li><button class="switch_slide" type="button" value="slider_first"><span class="visually_hidden">Слайд первый</span></button></li>
+            <li><button class="switch_slide activ_slide" type="button" value="slider_first"><span class="visually_hidden">Слайд первый</span></button></li>
             <li><button class="switch_slide" type="button" value="slider_second"><span class="visually_hidden">Слайд второй</span></button></li>
             <li><button class="switch_slide" type="button" value="slider_third"><span class="visually_hidden">Слайд третий</span></button></li>
           </ul>
@@ -165,16 +165,27 @@
         </div>
       </div>
     </footer>
-    <div class="contact_form visually_hidden"><!--Модальное/всплывающее окно-->
+    <div class="contact_form visually_hiddenНЕРАБОТАЕТ container"><!--Модальное/всплывающее окно-->
       <h4>Напишите нам</h4>
-      <button class="close_cross visually_hidden" type="button">закрыть</button><!--Выполняет действие-закрытие всплывающего окна-->
+      <button class="close_cross" type="button" aria-label="Закрыть форму для связи">
+        <img src="/img/image_decorative/close_cross.svg" alt="Иконка закрытия формы">
+      </button><!--Выполняет действие-закрытие всплывающего окна-->
       <form class="message" method="post" action="https://echo.htmlacademy.ru">
         <ul>
-          <li><label>Ваше имя:    <input type="text" name="contact_name" placeholder="Имя Фамилия"></label></li>
-          <li><label>Ваш e-mail:  <input type="email" name="contact_email" placeholder="email@example.com"></label></li>
-          <li><label>Текст письма:<textarea name="contact_textarea" placeholder="В свободной форме" rows="6" cols="80"></textarea></label></li>
+          <li class="message_input_field">
+            <label for="id_contact_name" class="message_label">Ваше имя:</label>
+            <input type="text" name="contact_name" placeholder="Имя Фамилия" id="id_contact_name">
+          </li>
+          <li class="message_input_field">
+            <label for="id_contact_email" class="message_label">Ваш e-mail:</label>
+            <input type="email" name="contact_email" placeholder="email@example.com" id="id_contact_email">
+          </li>
+          <li class="message_li_textarea message_input_field">
+            <label for="id_contact_textarea" class="message_label">Текст письма:</label>
+            <textarea name="contact_textarea" placeholder="В свободной форме" rows="6" cols="79" id="id_contact_textarea"></textarea>
+          </li>
         </ul>
-        <button class="button" type="submit">отправить</button>
+        <button class="message_button button" type="submit">отправить</button>
       </form>
     </div>
   </body>

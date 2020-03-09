@@ -45,7 +45,7 @@
                   </div>
                   <div class="price_controls">
                     <label class="min_price">от<input name="min_price" type="number" value="0"></label>
-                    <label class="max_price">до<input name="max_price" type="number" value="15000"></label>
+                    <label class="max_price">до<input name="max_price" type="number" placeholder="15 000"></label><!--value="15000" заменен ввиду необходимости пробела. -->
                   </div>
                 </div>
               </fieldset>
@@ -53,19 +53,42 @@
               <fieldset class="filter_sort_grid">
                 <legend>сетка:</legend>
                 <ul>
-                  <li><label class="radio_adaptive"><input type="radio" name="grid" value="adaptive" checked> Адаптивная</label></li>
-                  <li><label class="radio_fixed"><input type="radio" name="grid" value="fixed"> Фиксированная</label></li>
-                  <li><label class="radio_rubber"><input type="radio" name="grid" value="rubber"> Резиновая</label></li>
+                  <li>
+                    <input class="visually_hidden" type="radio" name="grid" value="adaptive" id="id_adaptive" checked>
+                    <label for="id_adaptive" class="radio radio_adaptive">Адаптивная</label>
+                  </li>
+                  <li>
+                    <input class="visually_hidden" type="radio" name="grid" value="fixed" id="id_fixed">
+                    <label for="id_fixed" class="radio radio_fixed">Фиксированная</label>
+                  </li>
+                  <li>
+                    <input class="visually_hidden" type="radio" name="grid" value="rubber" id="id_rubber">
+                    <label for="id_rubber" class="radio radio_rubber">Резиновая</label></li>
                 </ul>
               </fieldset>
               <fieldset class="filter_sort_features">
                 <legend>особенности:</legend>
                 <ul>
-                  <li><label class="checkbox_slider"><input type="checkbox" name="slider" value="slider" checked> Слайдер</label></li>
-                  <li><label class="checkbox_advantage"><input type="checkbox" name="advantage" value="advantage"> Блок преимуществ</label></li>
-                  <li><label class="checkbox_news"><input type="checkbox" name="news" value="news" checked> Новости</label></li>
-                  <li><label class="checkbox_gallery"><input type="checkbox" name="gallery" value="gallery"> Галерея</label></li>
-                  <li><label class="checkbox_shopping_cart"><input type="checkbox" name="shopping_cart" value="shopping_cart"> Корзина</label></li>
+                  <li>
+                    <input class="filter_sort_features_input visually_hidden" type="checkbox" name="slider" value="slider" id="id_slider" checked>
+                    <label for="id_slider" class="filter_sort_checkbox checkbox_slider">Слайдер</label>
+                  </li>
+                  <li>
+                    <input class="filter_sort_features_input visually_hidden" type="checkbox" name="advantage" value="advantage" id="id_advantage">
+                    <label for="id_advantage" class="filter_sort_checkbox checkbox_advantage">Блок преимуществ</label>
+                  </li>
+                  <li>
+                    <input class="filter_sort_features_input visually_hidden" type="checkbox" name="news" value="news" id="id_news" checked>
+                    <label for="id_news" class="filter_sort_checkbox checkbox_news">Новости</label>
+                  </li>
+                  <li>
+                    <input class="filter_sort_features_input visually_hidden" type="checkbox" name="gallery" value="gallery" id="id_gallery">
+                    <label for="id_gallery" class="filter_sort_checkbox checkbox_gallery">Галерея</label>
+                  </li>
+                  <li>
+                    <input class="filter_sort_features_input visually_hidden" type="checkbox" name="shopping_cart" value="shopping_cart" id="id_shopping_cart">
+                    <label for="id_shopping_cart" class="filter_sort_checkbox checkbox_shopping_cart">Корзина</label>
+                  </li>
                 </ul>
               </fieldset>
               <button class="button" type="submit">Показать</button>
@@ -80,16 +103,19 @@
                 <li><a href="#">по названию</a></li>
               </ul>
               <div class="switch">
+                <!-- Цвета треугольников для цвета по умолчанию могут быть скорректированы в самом свг которое находится в hmtl для того что бы выглядеть как на макете. -->
                 <a href="#" class="triangle_down" id="id_triangle_down">
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                    <path fill="#010101" d="M5.5 10L0 0h11"/>
+                    <path fill="#000000" d="M5.5 10L0 0h11"/>
+                    <!-- fill="#010101" если оставить цвет выбора позиции по умолчанию -->
                   </svg>
                   <span class="visually_hidden">Сортировать по убыванию стоимости
                   </span>
                 </a>
                 <a href="#" class="triangle_up" id="id_triangle_up">
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                    <path fill="#a6a6a6" d="M5.5 0L0 10h11z"/>
+                    <path fill="#000000" d="M5.5 0L0 10h11z"/>
+                    <!-- fill="#a6a6a6" цвет выбора по умолчанию -->
                   </svg>
                   <span class="visually_hidden">Сортировать по возрастанию стоимости
                   </span>
@@ -168,7 +194,7 @@
             </section>
 
             <ul class="page_switch">
-              <li><a class="button" href="#">1</a ></li>
+              <li><a class="button active_button" href="#">1</a ></li>
               <li><a class="button" href="#">2</a ></li>
               <li><a class="button" href="#">3</a ></li>
               <li><a class="button button_text" href="#">следующая</a></li>
@@ -176,7 +202,7 @@
           </div>
         </section>
     </main>
-    <footer class="footer_wrapper">
+    <footer class="footer_wrapper catalog">
       <!-- карта -->
       <div class="map">
         <!-- контакты -->
@@ -225,16 +251,27 @@
         </div>
       </div>
     </footer>
-    <div class="contact_form hidden"><!--Модальное/всплывающее окно-->
+    <div class="contact_form contact_form_catalog visually_hiddenНЕРАБОТАЕТ container"><!--Модальное/всплывающее окно-->
       <h4>Напишите нам</h4>
-      <button class="close_cross visually_hidden" type="button">закрыть</button><!--Выполняет действие-закрытие всплывающего окна-->
+      <button class="close_cross" type="button" aria-label="Закрыть форму для связи">
+        <img src="/img/image_decorative/close_cross.svg" alt="Иконка закрытия формы">
+      </button><!--Выполняет действие-закрытие всплывающего окна-->
       <form class="message" method="post" action="https://echo.htmlacademy.ru">
         <ul>
-          <li><label>Ваше имя:    <input type="text" name="contact_name" placeholder="Имя Фамилия"></label></li>
-          <li><label>Ваш e-mail:  <input type="email" name="contact_email" placeholder="email@example.com"></label></li>
-          <li><label>Текст письма:<textarea name="contact_textarea" placeholder="В свободной форме" rows="6" cols="80"></textarea></label></li>
+          <li class="message_input_field">
+            <label for="id_contact_name" class="message_label">Ваше имя:</label>
+            <input type="text" name="contact_name" placeholder="Имя Фамилия" id="id_contact_name">
+          </li>
+          <li class="message_input_field">
+            <label for="id_contact_email" class="message_label">Ваш e-mail:</label>
+            <input type="email" name="contact_email" placeholder="email@example.com" id="id_contact_email">
+          </li>
+          <li class="message_li_textarea message_input_field">
+            <label for="id_contact_textarea" class="message_label">Текст письма:</label>
+            <textarea name="contact_textarea" placeholder="В свободной форме" rows="6" cols="79" id="id_contact_textarea"></textarea>
+          </li>
         </ul>
-        <button class="button" type="submit">отправить</button>
+        <button class="message_button button" type="submit">отправить</button>
       </form>
     </div>
   </body>
