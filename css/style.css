@@ -1185,20 +1185,18 @@ li:active .icon {
 
 /* Контактная форма-Главная страница */
 .contact_form {
-  position: absolute;
-  top: 1696px;
+  position: fixed;
+  top: 50%;
   left: 50%;
   width: 920px;
-  /* height: 590px; */
-  /* margin-top: 0px; */
+  margin-top: -247px;
   margin-right: auto;
-  /* margin-bottom: 0px; */
   margin-left: -478px;
   background-color: #ffffff;
   box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
 }
 .contact_form_catalog {
-  top: 2426px;
+  margin-top: -234px;
 }
 .contact_form h4 {
   display: inline-block;
@@ -1216,15 +1214,8 @@ li:active .icon {
   width: 21px;
   height: 21px;
   border: none;
+  background-image: url("/img/image_decorative/close_cross.svg");
   opacity: 0.3;
-}
-.close_cross img {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  /* content: ""; */
-  width: 21px;
-  height: 21px;
 }
 .close_cross:hover {
   opacity: 1;
@@ -1232,14 +1223,6 @@ li:active .icon {
 .close_cross:active {
   opacity: 0.1;
 }
-
-
-
-
-
-
-
-
 .contact_form ul {
   display: flex;
   justify-content: space-between;
@@ -1249,7 +1232,6 @@ li:active .icon {
   margin-bottom: 0px;
   margin-left: 81px;
   padding-left: 0px;
-
 }
 .contact_form li {
   display: flex;
@@ -1260,7 +1242,6 @@ li:active .icon {
 .message_label {
   font-weight: 700;
 }
-
 .message_label ~ input,
 .message_label ~ textarea {
   margin-top: 6px;
@@ -1269,7 +1250,7 @@ li:active .icon {
   padding-bottom: 14px;
   padding-left: 13px;
   border: 2px solid #d7dcde;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .message_label ~ input::-moz-placeholder,
