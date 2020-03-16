@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Нёрдс-главная</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
@@ -38,14 +38,13 @@
                   <div class="range_controls">
                     <div class="scale">
                       <div class="bar"></div>
-                      <!-- style="margin-left: 20%; width: 30%" -->
                     </div>
                     <div class="toggle toggle_min"></div>
                     <div class="toggle toggle_max"></div>
                   </div>
                   <div class="price_controls">
                     <label class="min_price">от<input name="min_price" type="number" value="0"></label>
-                    <label class="max_price">до<input name="max_price" type="number" placeholder="15 000"></label><!--value="15000" заменен ввиду необходимости пробела. -->
+                    <label class="max_price">до<input name="max_price" type="number" placeholder="15 000"></label>
                   </div>
                 </div>
               </fieldset>
@@ -103,11 +102,9 @@
                 <li><a href="#">по названию</a></li>
               </ul>
               <div class="switch">
-                <!-- Цвета треугольников для цвета по умолчанию могут быть скорректированы в самом свг которое находится в hmtl для того что бы выглядеть как на макете. -->
                 <a href="#" class="triangle_down" id="id_triangle_down">
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                     <path fill="#000000" d="M5.5 10L0 0h11"/>
-                    <!-- fill="#010101" если оставить цвет выбора позиции по умолчанию -->
                   </svg>
                   <span class="visually_hidden">Сортировать по убыванию стоимости
                   </span>
@@ -115,7 +112,6 @@
                 <a href="#" class="triangle_up" id="id_triangle_up">
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                     <path fill="#000000" d="M5.5 0L0 10h11z"/>
-                    <!-- fill="#a6a6a6" цвет выбора по умолчанию -->
                   </svg>
                   <span class="visually_hidden">Сортировать по возрастанию стоимости
                   </span>
@@ -123,70 +119,69 @@
               </div>
             </div>
 
-            <section class="cards"> <!--Контейнер для построения сетки из карточек товаров в нем все карточки сайтов-->
-
-              <article class="card card_sedona"><!--SEDONA/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
-            <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
-              <img src="img/image_content/img_sedona_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
-              <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
-                <h3><a href="#" class="card_price">sedona</a></h3><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
+            <section class="cards">
+              <article class="card card_sedona">
+            <div class="wrapper">
+              <img src="img/image_content/img_sedona_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576">
+              <div class="product_card">        
+                <h3><a href="#" class="card_price">sedona</a></h3>
                 <p>Информационный сайт для туристов</p>
-                <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+                <button class="button" type="button">9990 руб.</button>
               </div>
             </div>
               </article>
 
-              <article class="card card_pink"><!--Pink App/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
-            <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
-              <img src="img/image_content/img_pink_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
-              <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
-                <h3><a href="#" class="card_price">PINK APP</a></h3><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
+              <article class="card card_pink">
+            <div class="wrapper">
+              <img src="img/image_content/img_pink_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576">
+              <div class="product_card">        
+                <h3><a href="#" class="card_price">PINK APP</a></h3>
                 <p>Продуктовый лендинг приложения для iOS и Android</p>
-                <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+                <button class="button" type="button">9990 руб.</button>
               </div>
             </div>
               </article>
 
-              <article class="card card_barbershop"><!--Barbershop/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
-            <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
-              <img src="img/image_content/img_barbershop_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
-              <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
-                <h3><a href="#" class="card_price">BARBERSHOP</a></h3><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
+              <article class="card card_barbershop">
+            <div class="wrapper">
+              <img src="img/image_content/img_barbershop_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576">
+              <div class="product_card">
+                <h3><a href="#" class="card_price">BARBERSHOP</a></h3>
                 <p>Сайт салона красоты.Для мужчин, да.</p>
-                <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+                <button class="button" type="button">9990 руб.</button>
               </div>
             </div>
               </article>
 
-              <article class="card card_mishka"><!--MISHKA/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
-            <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
-              <img src="img/image_content/img_mishka_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
-              <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
-                <h3><a href="#" class="card_price">MISHKA</a></h3><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
+              <article class="card card_mishka">
+            <div class="wrapper">
+              <img src="img/image_content/img_mishka_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576">
+              <div class="product_card">
+                <h3><a href="#" class="card_price">MISHKA</a></h3>
                 <p>Интернет-магазин вязаных игрушек</p>
-                <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+                <button class="button" type="button">9990 руб.</button>
               </div>
             </div>
               </article>
 
-              <article class="card card_a_plus"><!--A Plus/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
-            <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
-              <img src="img/image_content/img_aplus_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
-              <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
-                <h3><a href="#" class="card_price">A PLUS</a></h3><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
+              <article class="card card_a_plus">
+            <div class="wrapper">
+              <img src="img/image_content/img_aplus_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576">
+              <div class="product_card">
+                <h3><a href="#" class="card_price">A PLUS</a></h3>
                 <p>Лендинг курсов повышения квалификации</p>
-                <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+                <button class="button" type="button">9990 руб.</button>
               </div>
             </div>
               </article>
 
-              <article class="card card_kvast"><!--КВАСТ/Контейнер для единицы составляющей СЕТКИ (или колонны) карточки сайта-товара-->
-            <div class="wrapper"> <!--Контейнер для карточки сайта-товара (Обертка) - видимая часть, будет являться границей для изображения и иного наполнения-->
-              <img src="img/image_content/img_kvast_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576"><!--Изображение сайта на переднем плане до наведения(для элемента ниже)-->
-              <div class="product_card"><!--Всплывающее при наведении окно, название товара является ссылкой-->        
-                <h3><a href="#" class="card_price">КВАСТ</a></h3><!--?название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать-->
+              <article class="card card_kvast">
+            <div class="wrapper">
+              <img src="img/image_content/img_kvast_jpg.jpg" alt="Вариант выбора сайта" width="360" height="576">
+              <div class="product_card">
+                <h3><a href="#" class="card_price">КВАСТ</a></h3>
                 <p>Промо-сайт производителя крафтового кваса</p>
-                <button class="button" type="button">9990 руб.</button><!--Выглядит как кнопка, уточнить! Точно ли она ничего не делает и никуда не ведет, возможно в задании неточность?-->
+                <button class="button" type="button">9990 руб.</button>
               </div>
             </div>
               </article>
@@ -203,9 +198,7 @@
         </section>
     </main>
     <footer class="footer_wrapper catalog">
-      <!-- карта -->
       <div class="map">
-        <!-- контакты -->
         <div class="container">
           <div class="contacts" id="id_contacts">
           <h4>NЁRDS DESIGN STUDIO</h4>
@@ -215,8 +208,6 @@
           </div>
         </div>
       </div>
-      <!-- Социальные сети -->
-      <!--У иконок должны быть скрываемые подписи которые будут появляться если пропадет изображение иконок-->
       <div class="social_offer_wrapper container">
         <ul class="social_network">
           <li>
@@ -244,18 +235,16 @@
             </a>
           </li>
         </ul>
-        <!-- Предложение скидки -->
         <div class="offer">
           <p class="title"><b>Давайте дружить, это выгодно!</b></p>
           <p class="text">Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </div>
     </footer>
-    <div class="contact_form contact_form_catalog visually_hiddenНЕРАБОТАЕТ container"><!--Модальное/всплывающее окно-->
+    <div class="contact_form contact_form_catalog container">
       <h4>Напишите нам</h4>
       <button class="close_cross" type="button" aria-label="Закрыть форму для связи">
-        <img src="/img/image_decorative/close_cross.svg" alt="Иконка закрытия формы">
-      </button><!--Выполняет действие-закрытие всплывающего окна-->
+      </button>
       <form class="message" method="post" action="https://echo.htmlacademy.ru">
         <ul>
           <li class="message_input_field">

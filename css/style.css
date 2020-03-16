@@ -115,11 +115,6 @@ input[type="radio"].visually_hidden {
   padding-bottom: 7px;
   border-bottom: 2px solid #fb565a;
 }
-
-/* -------------------------------- */
-/* В работе */
-/* Поправить шапку */
-
 .sliders {
   position: relative;
   width: 1160px;
@@ -136,7 +131,6 @@ input[type="radio"].visually_hidden {
   background-color: #fb565a;
 }
 .first {
-  /* display: none; */
   width: 1160px;
   height: 427px;
   padding: 0px;
@@ -144,7 +138,7 @@ input[type="radio"].visually_hidden {
   background-image: url("../img/image_decorative/slide_picture.png");
   background-repeat: no-repeat;
   background-size: 698px 413px;
-  background-position: 432px 1px;
+  background-position: 431px 15px;
 }
 .first .title {
   width: 380px;
@@ -236,18 +230,6 @@ input[type="radio"].visually_hidden {
 .third .button {
   margin-top: 22px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 .switch_box {
   position: absolute;
   bottom: 79px;
@@ -283,13 +265,8 @@ input[type="radio"].visually_hidden {
   background-repeat: no-repeat;
   background-position: -4px -4px;
 }
-
-
-
-
-/* ------------------------------------ */
 .services {
-  margin-top: 80px;
+  margin-top: 73px;
 }
 .services ul {
   display: flex;
@@ -305,8 +282,9 @@ input[type="radio"].visually_hidden {
   list-style: none;
 }
 .services h3 {
-  margin-top: 20px;
+  margin-top: 18px;
   margin-bottom: 0px;
+  margin-left: -1px;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
@@ -315,9 +293,9 @@ input[type="radio"].visually_hidden {
 }
 .button {
   padding-top: 16px;
-  padding-right: 39px;
-  padding-bottom: 16px;
-  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 15px;
+  padding-left: 39px;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
@@ -342,8 +320,8 @@ input[type="radio"].visually_hidden {
 .web_site p {
   width: 238px;
   word-spacing: -1px;
-  margin-top: 15px;
-  margin-bottom: 45px;
+  margin-top: 16px;
+  margin-bottom: 46px;
 }
 .services_column span {
   white-space: nowrap;
@@ -354,10 +332,10 @@ input[type="radio"].visually_hidden {
 }
 .applications p {
   width: 244px;
-  margin-top: 15px;
+  margin-top: 16px;
   margin-left: 1px;
   word-spacing: 2px;
-  margin-bottom: 45px;
+  margin-bottom: 46px;
 }
 .applications span {
   word-spacing: 1px;
@@ -368,7 +346,7 @@ input[type="radio"].visually_hidden {
 }
 .presentations p {
   width: 213px;
-  margin-top: 14px;
+  margin-top: 16px;
   margin-bottom: 46px;
 }
 .product_card .button,
@@ -434,7 +412,7 @@ input[type="radio"].visually_hidden {
   max-width: 360px;
 }
 .credo_header {
-  margin-top: 75px;
+  margin-top: 72px;
   margin-bottom: 0px;
   font-size: 45px;
   font-weight: 500;
@@ -467,7 +445,7 @@ input[type="radio"].visually_hidden {
 }
 .credo li:before {
   position: absolute;
-  top: 12px;
+  top: 11px;
   left: -35px;
   content: "";
   width: 25px;
@@ -475,7 +453,7 @@ input[type="radio"].visually_hidden {
   background-color: #fa565a;
 }
 .results {
-  margin-top: 40px;
+  margin-top: 38px;
 }
 .results table {
   position: relative;
@@ -495,8 +473,9 @@ input[type="radio"].visually_hidden {
   line-height: 18px;
 }
 .results_progress td {
-  padding-top: 44px;
+  padding-top: 43px;
   padding-bottom: 12px;
+  padding-left: 0px;
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
@@ -508,7 +487,7 @@ input[type="radio"].visually_hidden {
   padding-left: 21px;
 }
 .results_text td {
-  padding-top: 8px;
+  padding-top: 7px;
 }
 .results_text td:nth-child(2) {
   padding-left: 16px;
@@ -517,13 +496,9 @@ input[type="radio"].visually_hidden {
   padding-left: 21px;
 }
 .results_progress sup {
-  padding-bottom: 20px;
+  top: -15px;
   font-size: 26px;
 }
-
-
-
-
 .customer {
   display: flex;
   flex-direction: row;
@@ -532,28 +507,52 @@ input[type="radio"].visually_hidden {
   flex-wrap: wrap;
   padding-left: 0px;
   padding-top: 45px;
-  padding-bottom: 37px;
+  padding-bottom: 38px;
   margin: 16px 0px 0px 0px;
-  margin-top: 16px;
+  margin-top: 19px;
   border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
   list-style: none;
 }
 .customer li {
   position: relative;
-  right: 17px;
+  right: 19px;
   top: 1px;
   
 }
-.customer a {
-  opacity: 0.2;
+.customer .client_html_academy {
+  top: 6px;
+  left: -18px;
 }
-.client_mishka {
-  position: relative;
+.customer .client_html_academy::after {
+  bottom: 28%;
+  left: 248px;
+}
+.customer .client_borodinski {
+  right: 20px;
+  top: 1px;
+}
+.customer .client_borodinski::after {
+  bottom: 29%;
+  left: 253px;
+}
+.customer .client_pink {
+  right: 16px;
+  top: 1px;
+}
+.customer .client_pink::after {
+  bottom: 17%;
+  left: 241px;
+}
+.customer .client_mishka {
+  top: 4px;
   left: 7px;
 }
 .client_mishka::after {
   display: none;
+}
+.customer a {
+  opacity: 0.2;
 }
 .customer li::after {
   content: "";
@@ -570,21 +569,6 @@ input[type="radio"].visually_hidden {
 .customer a:active {
   opacity: 0.1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer_wrapper {
   display: flex;
   flex-direction: column;
@@ -599,7 +583,6 @@ input[type="radio"].visually_hidden {
 }
 .catalog .map {
   margin-top: 20px;
-  
 }
 .contacts {
   margin-top: 54px;
@@ -607,8 +590,8 @@ input[type="radio"].visually_hidden {
   margin-left: 0px;
   padding-left: 50px;
   padding-top: 25px;
-  width: 283px;
-  min-height: 308px;
+  width: 269px;
+  min-height: 283px;
   background-color: #ffffff;
 }
 .contacts h4 {
@@ -622,17 +605,26 @@ input[type="radio"].visually_hidden {
   line-height: 18px;
   color: #666666;
 }
-.phone {
-  margin-bottom: 52px;
-}
 .contacts .button {
-  padding-right: 50px;
+  padding-right: 45px;
+  padding-left: 44px;
   background-color: #fb565a;
+}
+.contacts .address {
+  margin-left: 2px;
+  margin-top: -1px;
+}
+.contacts .phone {
+  margin-bottom: 51px;
+  padding-top: 2px;
+  padding-left: 2px;
 }
 .social_offer_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 26px;
+  padding-left: 21px;
 }
 .social_network {
   display: flex;
@@ -674,7 +666,7 @@ li:active .icon {
   color: #444444;
 }
 .offer .title {
-  margin-top: 46px;
+  margin-top: 44px;
   margin-right: 218px;
   margin-bottom: 0px;
   font-size: 36px;
@@ -686,17 +678,13 @@ li:active .icon {
   margin-top: 11px;
   margin-right: 218px;
 }
-
 .main_big_sliders {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-content: space-between; */
   width: 100%;
+  min-height: 428px;
   background-color: #eeeeee;
   margin-left: auto;
   margin-right: auto;
 }
-
 .main_big {
   display: flex;
   flex-direction: column;
@@ -704,8 +692,8 @@ li:active .icon {
 }
 .main_head {
   margin-top: 0px;
-  padding-top: 59px;
-  padding-bottom: 116px;
+  padding-top: 60px;
+  padding-bottom: 108px;
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
@@ -717,6 +705,7 @@ li:active .icon {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 8px;
 }
 .filter {
   margin-right:  140px;
@@ -739,18 +728,17 @@ li:active .icon {
 }
 .price_range {
   width: 260px;
-  margin-top: 41px;
+  margin-top: 39px;
 }
 .price_slider legend {
   font-size: 19px;
-  line-height: 48px;
+  line-height: 50px;
   text-transform: uppercase;
   font-weight: 700;
 }
 .range_controls {
   position: relative;
   height: 51px;
-  /* margin-bottom: 15px; */
   padding-top: 28px;
   padding-right: 20px;
   padding-left: 20px;
@@ -791,18 +779,18 @@ li:active .icon {
 }
 .price_controls label {
   display: inline-block;
-  margin-top: 13px;
+  margin-top: 14px;
   width: 50%;
   font-size: 16px;
   text-transform: uppercase;
 }
 .price_controls input {
   width: 67px;
-  margin-left: 11px;
+  margin-left: 12px;
   padding-top: 10px;
-  padding-right: 2px;
+  padding-right: 0px;
   padding-bottom: 10px;
-  padding-left: 12px;
+  padding-left: 13px;
   font-size: 16px;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 400;
@@ -812,39 +800,9 @@ li:active .icon {
   border: none;
   border-radius: 2px;
 }
-
 .max_price {
   text-align: right;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .filter_sort_grid {
   position: relative;
   margin-top: 54px;
@@ -870,7 +828,6 @@ li:active .icon {
 .filter_sort_grid li:last-child {
   margin-bottom: 0px;
 }
-
 .radio::before {
   content: "";
   position: absolute;
@@ -904,35 +861,6 @@ li:active .icon {
 .filter_sort_grid input:disabled + label {
   opacity: 0.3;
 }
-/* .filter_sort_grid input:focus {
-  opacity: 1;
-} */
-/* Необходимо на досуге рассмотреть 
-  Изменение состояния фокуса при первом переключении
-  табом. Пока не видно. 
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .filter_sort_features {
   margin-top: 29px;
   margin-left: 1px;
@@ -962,8 +890,6 @@ li:active .icon {
   background-repeat: no-repeat;
   opacity: 0.4;
 }
-
-
 .filter_sort_features_input:checked + .filter_sort_checkbox::before {
   content: "";
   position: absolute;
@@ -983,10 +909,10 @@ li:active .icon {
 }
 .filter .button {
   margin-top: 23px;
-  padding-top: 17px;
-  padding-right: 87px;
+  padding-top: 16px;
+  padding-right: 88px;
   padding-bottom: 15px;
-  padding-left: 89px;
+  padding-left: 88px;
 }
 .sort {
   display: flex;
@@ -1015,7 +941,6 @@ li:active .icon {
   line-height: 21px;
   text-transform: uppercase;
 }
-/* Цвета треугольников для цвета по умолчанию могут быть скорректированы в самом свг которое находится в hmtl для того что бы выглядеть как на макете.  */
 .sort_switch li {
   margin-right: 26px;
 }
@@ -1052,13 +977,8 @@ li:active .icon {
   max-width: 360px;
   margin-bottom: 24px;
 }
-/* ---------------------------------- */
-/* Проверить возможность выполнения без отризательного внешнего отступа снизу. 
-Потенциально костыльное решение с отрицательным марджином на элементе, тут у тебя высота 60 стоит избыточная, нужно разобраться так чтобы без отрицального марджина можно было сделать. Попробуй проверить.
-*/
 .page_switch {
-  margin-top: 1px;
-  /* margin-bottom: -44px; */
+  margin-top: 2px;
   margin-left: 1px;
   padding-top: 42px;
   padding-left: 0px;
@@ -1067,6 +987,7 @@ li:active .icon {
   list-style: none;
 }
 .page_switch .button {
+  margin-top: 10px;
   margin-right: 11px;
   padding-top: 15px;
   padding-right: 21px;
@@ -1167,36 +1088,20 @@ li:active .icon {
   background-color: #d7373b;
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Контактная форма-Главная страница */
 .contact_form {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   width: 920px;
-  margin-top: -247px;
+  margin-top: -230px;
   margin-right: auto;
   margin-left: -478px;
   background-color: #ffffff;
   box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
 }
 .contact_form_catalog {
-  margin-top: -234px;
+  margin-top: -222px;
 }
 .contact_form h4 {
   display: inline-block;
@@ -1214,8 +1119,9 @@ li:active .icon {
   width: 21px;
   height: 21px;
   border: none;
-  background-image: url("/img/image_decorative/close_cross.svg");
+  background-image: url(/img/image_decorative/close_cross.svg);
   opacity: 0.3;
+  background-color: lightseagreen;
 }
 .close_cross:hover {
   opacity: 1;
@@ -1250,9 +1156,8 @@ li:active .icon {
   padding-bottom: 14px;
   padding-left: 13px;
   border: 2px solid #d7dcde;
-  border-radius: 2px;
+  border-radius: 5px;
 }
-
 .message_label ~ input::-moz-placeholder,
 .message_label ~ textarea::-moz-placeholder {
   color: #444444;
@@ -1267,9 +1172,6 @@ li:active .icon {
 .message_input_field:hover textarea {
   border-color: #b4b9bb;
 }
-
-
-/* lklklklklk */
 .message_input_field input:focus,
 .message_input_field textarea:focus {
 border-color: #000000;
@@ -1284,27 +1186,11 @@ border-color: #000000;
   color: #444444;
   opacity: 1;
 }
-
-
-
-
-
-
 .message_input_field input:invalid,
 .message_input_field textarea:invalid {
 border-color: #e74246;
 color: #e74246;
 }
-
-
-
-
-
-
-
-
-
-/* jhjhjhjhjh */
 .message .message_li_textarea {
   margin-top: 31px;
   flex-grow: 1;
@@ -1326,37 +1212,6 @@ color: #e74246;
   background-color: #fb565a;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ----------------------- */
-/* body {
-  
-  color: red; 
-}
-.navigation li a {
-  color: red;
-} */
 /* 
 
 
