@@ -151,20 +151,17 @@ input[type="radio"].visually_hidden {
 }
 .first .text {
   width: 380px;
-  margin-top: 27px;
-  margin-left: 0px;
+  margin-top: 29px;
+  margin-left: 2px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-}
-.first .text_p {
-  margin: 0px;
 }
 .first span {
   white-space: nowrap;
 }
 .first .button {
-  margin-top: 40px;
+  margin-top: 22px;
 }
 .second {
   display: none;
@@ -178,7 +175,7 @@ input[type="radio"].visually_hidden {
   background-position: 500px 16px;
 }
 .second .title {
-  width: 600px;
+  width: 515px;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 74px;
@@ -187,7 +184,7 @@ input[type="radio"].visually_hidden {
   font-weight: 500;
 }
 .second .text {
-  width: 419px;
+  width: 409px;
   margin-top: 29px;
   margin-left: 2px;
   font-size: 16px;
@@ -260,7 +257,10 @@ input[type="radio"].visually_hidden {
 .switch_box .switch_slide:focus::before {
   content: "";
   position: absolute;
-  transform: translateX(-51%) translateY(-53%);
+  top: 2px;
+  left: 0px;
+  -ms-top: 0px;
+  -ms-left: 1px;
   width: 16px;
   height: 16px;
   background-image: url(../img/image_decorative/active_button.svg);
@@ -662,18 +662,6 @@ li:active .icon {
 }
 .social_network a {
   margin: auto;
-}
-.social_network .icon_vk {
-  margin-top: 30px;
-  margin-left: 26px;
-}
-.social_network .icon_facebook {
-  margin-top: 28px;
-  margin-left: 34px;
-}
-.social_network .icon_instagram {
-  margin-top: 29px;
-  margin-left: 28px;
 }
 .offer p {
   line-height: 22px;
@@ -1237,7 +1225,7 @@ padding-top: 0px;
 padding-right: 0px;
 padding-bottom: 0px;
 padding-left: 0px; 
-https://htmlacademy-htmlcss.github.io/1285009-nerds-27/4/
+
 */
 
 
