@@ -584,6 +584,7 @@ input[type="radio"].visually_hidden {
   background-image: url("../img/image_decorative/map_adress.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #ffffff;
 }
 .catalog .map {
   margin-top: 20px;
@@ -815,6 +816,9 @@ li:active .icon {
   background-color: #eeeeee;
   border: none;
   border-radius: 2px;
+}
+.price_controls input {
+  -moz-appearance: textfield;
 }
 .max_price {
   text-align: right;
